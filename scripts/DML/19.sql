@@ -1,0 +1,2 @@
+UPDATE Customer SET password ='xyzzy' WHERE email in (select 
+email  from transaction where (extract (year from sysdate) -2) < extract(year from tdate) AND extract(year from tdate) <  extract (year from sysdate) );

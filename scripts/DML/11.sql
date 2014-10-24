@@ -1,0 +1,1 @@
+SELECT E.Zip, round ((count(E.Email)/ (SELECT count(*) FROM trade) *100) ,2)as percentage FROM TradeEmail E, Customer C WHERE E.Email=C.Email GROUP BY E.Zip;

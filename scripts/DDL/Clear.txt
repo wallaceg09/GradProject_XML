@@ -1,0 +1,3 @@
+DeleteTmp.sql
+drop.sql
+DropViews.sql

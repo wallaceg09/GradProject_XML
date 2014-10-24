@@ -1,0 +1,2 @@
+DELETE FROM Item 
+WHERE  (Itemnumber, Email) IN (SELECT  I.Itemnumber, I.Email FROM Item I , Bid B WHERE  I.Itemnumber = B.Itemnumber AND I.Email = B.IEmail AND  I.Deadline < B.BidTime AND I.ExpectedPrice > B.BidAmount);

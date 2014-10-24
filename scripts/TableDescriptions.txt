@@ -1,0 +1,135 @@
+SQL> desc customer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMAIL                                     NOT NULL VARCHAR2(14)
+ PASSWORD                                           VARCHAR2(5)
+ NUMBEROFBIDS                                       NUMBER(2)
+ REGISTRATIONDATE                                   DATE
+ TITLE                                              VARCHAR2(4)
+ FIRSTNAME                                          VARCHAR2(15)
+ MIDINIT                                            VARCHAR2(10)
+ LASTNAME                                           VARCHAR2(15)
+ SUFFIX                                             VARCHAR2(5)
+ STREET                                             VARCHAR2(20)
+ STATE                                              VARCHAR2(20)
+ CITY                                               VARCHAR2(20)
+ COUNTRY                                            VARCHAR2(15)
+ ZIP                                                VARCHAR2(6)
+
+SQL> desc goldcustomer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMAIL                                     NOT NULL VARCHAR2(14)
+ GUDATE                                             DATE
+ DISCOUNT                                           NUMBER(4)
+
+SQL> desc platinumcustomer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMAIL                                     NOT NULL VARCHAR2(14)
+ PUDATE                                             DATE
+ URL                                                VARCHAR2(30)
+ URLVIEWS                                           NUMBER(3)
+
+SQL> desc item;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMNUMBER                                NOT NULL NUMBER(4)
+ EMAIL                                     NOT NULL VARCHAR2(14)
+ EXPECTEDPRICE                                      NUMBER(4)
+ WEIGHT                                             NUMBER(4)
+ DESCRIPTION                                        VARCHAR2(10)
+ DEADLINE                                           DATE
+ FILENAME                                           VARCHAR2(10)
+
+SQL> desc keywords;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMNUMBER                                NOT NULL NUMBER(4)
+ EMAIL                                     NOT NULL VARCHAR2(14)
+ KEYWORD                                   NOT NULL VARCHAR2(10)
+
+SQL> desc Transaction;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ IDNUMBER                                  NOT NULL NUMBER(4)
+ TYPE                                               VARCHAR2(20)
+ AMOUNT                                             NUMBER(4)
+ TDATE                                              DATE
+ EMAIL                                              VARCHAR2(14)
+
+SQL> desc thread;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ THREADID                                  NOT NULL NUMBER(4)
+ TITLE                                              VARCHAR2(10)
+
+SQL> desc message;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ THREADID                                  NOT NULL NUMBER(4)
+ MESSAGEID                                 NOT NULL NUMBER(4)
+ CREATETIME                                         TIMESTAMP(6)
+ TEXT                                               VARCHAR2(50)
+ EMAIL                                              VARCHAR2(14)
+
+SQL> desc trade;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BEMAIL                                    NOT NULL VARCHAR2(14)
+ SEMAIL                                    NOT NULL VARCHAR2(14)
+ ITEMNUMBER                                NOT NULL NUMBER(4)
+ IEMAIL                                    NOT NULL VARCHAR2(14)
+
+SQL> desc bid;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BEMAIL                                    NOT NULL VARCHAR2(14)
+ ITEMNUMBER                                NOT NULL NUMBER(4)
+ IEMAIL                                    NOT NULL VARCHAR2(14)
+ BIDAMOUNT                                          NUMBER(4)
+ BIDTIME                                            TIMESTAMP(6)
+
+SQL> desc itemtransaction;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMNUMBER                                NOT NULL NUMBER(4)
+ EMAIL                                     NOT NULL VARCHAR2(14)
+ IDNUMBER                                  NOT NULL NUMBER(4)
+
+SQL> desc itemreview
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REMAIL                                    NOT NULL VARCHAR2(14)
+ IEMAIL                                    NOT NULL VARCHAR2(14)
+ ITEMNUMBER                                NOT NULL NUMBER(4)
+ RATING                                    NOT NULL NUMBER(1)
+
+SQL> desc customerreview;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REMAIL                                    NOT NULL VARCHAR2(14)
+ CEMAIL                                    NOT NULL VARCHAR2(14)
+ CRITIQUE                                           VARCHAR2(10)
+
+SQL> desc moderator;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ THREADID                                  NOT NULL NUMBER(4)
+ EMAIL                                              VARCHAR2(14)
+
+SQL> desc messagerating;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ THREADID                                  NOT NULL NUMBER(4)
+ MESSAGEID                                 NOT NULL NUMBER(4)
+ EMAIL                                     NOT NULL VARCHAR2(14)
+ RATING                                             VARCHAR2(7)
+
+SQL> desc reply;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OTHREADID                                          NUMBER(4)
+ OMESSAGEID                                         NUMBER(4)
+ RTHREADID                                 NOT NULL NUMBER(4)
+ RMESSAGEID                                NOT NULL NUMBER(4)

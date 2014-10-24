@@ -1,0 +1,7 @@
+*.jar
+!Combinatorics*.jar
+/scripts/BACKUP_DML/*
+/scripts/DDL/BACKUPS/*
+/scripts/DDL/NOTUSED/*
+/scripts/SQLPlusDML/*
+/bin/*
